@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eliminación de datos — CookSnap</title>
+  <meta name="description" content="Cómo eliminar tus datos en la app CookSnap." />
+  <link rel="icon" href="assets/icon.png" />
+  <style>
+    :root {
+      --bg: #FAFAF8;
+      --card: #FFFFFF;
+      --primary: #D4654A;
+      --secondary: #4A90A4;
+      --text: #2D2D2D;
+      --text-secondary: #7A7A7A;
+      --muted: #A0A0A0;
+      --border: #E8E8E5;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.65;
+    }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 48px 24px 96px; }
+    header { text-align: center; margin-bottom: 48px; }
+    .logo { font-size: 36px; font-weight: 900; letter-spacing: -1px; text-decoration: none; color: var(--text); display: inline-block; }
+    .logo .accent { color: var(--primary); }
+    .tag { color: var(--muted); font-size: 13px; letter-spacing: 2px; text-transform: uppercase; margin-top: 10px; }
+    .back { display: inline-block; margin-bottom: 28px; color: var(--secondary); text-decoration: none; font-size: 14px; }
+    h1 { font-size: 28px; margin: 40px 0 8px; }
+    h2 { font-size: 20px; margin: 36px 0 8px; color: var(--primary); }
+    .updated { color: var(--muted); font-size: 14px; }
+    a { color: var(--secondary); }
+    ol, ul { padding-left: 22px; }
+    li { margin: 8px 0; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 16px 20px;
+      margin: 20px 0;
+      font-size: 15px;
+      box-shadow: 0 2px 10px rgba(0,0,0,.03);
+    }
+    footer { text-align: center; color: var(--muted); font-size: 13px; margin-top: 64px; border-top: 1px solid var(--border); padding-top: 24px; }
+    strong { color: var(--text); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="index.html">← Volver a la descarga</a>
+    <header>
+      <a class="logo" href="index.html">Cook<span class="accent">Snap</span></a>
+      <div class="tag">Tu recetario con IA</div>
+    </header>
+
+    <h1>Eliminación de datos</h1>
+    <p class="updated">Última actualización: 22 de junio de 2026</p>
+
+    <p>En <strong>CookSnap</strong> no necesitas una cuenta y <strong>tus datos se
+    guardan solo en tu dispositivo</strong>. No tenemos servidores con tu
+    información, así que tú tienes el control total para eliminarla.</p>
+
+    <h2>Cómo eliminar tus datos</h2>
+    <ol>
+      <li><strong>Borrar dentro de la App:</strong> elimina recetas, colecciones o
+      planes desde la propia App, y quita tu clave de OpenAI en
+      <strong>Configuración → Importación con IA → Quitar key</strong>.</li>
+      <li><strong>Borrar todo de una vez:</strong> en Android, ve a
+      <strong>Ajustes → Aplicaciones → CookSnap → Almacenamiento →
+      "Borrar datos"</strong>. Esto elimina toda la información local.</li>
+      <li><strong>Desinstalar la App:</strong> al desinstalarla se elimina toda su
+      base de datos local del dispositivo.</li>
+      <li><strong>Copias de seguridad:</strong> si exportaste una copia a Google
+      Drive (u otro lugar), elimina ese archivo desde allí.</li>
+    </ol>
+
+    <div class="card">
+      <strong>Nota:</strong> como no almacenamos tus datos en ningún servidor, no
+      hay nada que solicitarnos eliminar de nuestra parte. Todo está bajo tu
+      control en el dispositivo.
+    </div>
+
+    <h2>¿Dudas?</h2>
+    <p>Si necesitas ayuda, escríbenos a
+    <a href="mailto:cacorreapacheco@gmail.com?subject=Eliminar%20mis%20datos%20-%20CookSnap">cacorreapacheco@gmail.com</a>.
+    Para más detalles consulta la
+    <a href="privacy.html">Política de Privacidad</a>.</p>
+
+    <footer>
+      CookSnap — Creado por César Correa
+    </footer>
+  </div>
+</body>
+</html>

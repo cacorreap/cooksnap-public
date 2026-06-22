@@ -1,0 +1,6 @@
+# El APK NO se versiona en git: se publica como asset en GitHub Releases.
+*.apk
+*.aab
+
+# Sistema
+.DS_Store
