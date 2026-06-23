@@ -108,6 +108,22 @@
     }
     footer a { color: var(--secondary); }
     a { color: var(--secondary); }
+
+    /* Capturas */
+    .shots-h { font-size: 17px; margin: 44px 0 4px; color: var(--primary); }
+    .shots-cap { color: var(--text-secondary); font-size: 13px; margin: 0 0 12px; }
+    .shots {
+      display: flex; gap: 14px; overflow-x: auto; padding: 4px 2px 16px;
+      scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
+    }
+    .shot { flex: 0 0 auto; width: 190px; scroll-snap-align: center; }
+    .shot img {
+      width: 100%; display: block; border-radius: 20px;
+      border: 1px solid var(--border); box-shadow: 0 10px 28px rgba(0,0,0,.14); background: #fff;
+    }
+    .shot .scap { text-align: center; color: var(--muted); font-size: 12px; margin-top: 8px; }
+    .shots::-webkit-scrollbar { height: 6px; }
+    .shots::-webkit-scrollbar-thumb { background: #e0d6d2; border-radius: 3px; }
   </style>
 </head>
 <body>
@@ -130,6 +146,18 @@
       </a>
     </div>
     <p class="meta">APK · Android · <b>v1.0.1</b></p>
+
+    <section id="shotsSec">
+      <h2 class="shots-h">📱 Así se ve</h2>
+      <p class="shots-cap">Desliza para ver más →</p>
+      <div class="shots">
+        <div class="shot"><img src="assets/screenshots/01-home.png" alt="Inicio" loading="lazy" onerror="this.closest('.shot').remove()"><div class="scap">Inicio</div></div>
+        <div class="shot"><img src="assets/screenshots/02-detalle.png" alt="Detalle de receta" loading="lazy" onerror="this.closest('.shot').remove()"><div class="scap">Detalle · Modo Cocina/Thermomix</div></div>
+        <div class="shot"><img src="assets/screenshots/03-modo-cocina.png" alt="Modo Cocina" loading="lazy" onerror="this.closest('.shot').remove()"><div class="scap">Modo Cocina</div></div>
+        <div class="shot"><img src="assets/screenshots/04-timer.png" alt="Temporizador" loading="lazy" onerror="this.closest('.shot').remove()"><div class="scap">Temporizador por paso</div></div>
+        <div class="shot"><img src="assets/screenshots/05-thermomix.png" alt="Modo Thermomix" loading="lazy" onerror="this.closest('.shot').remove()"><div class="scap">Modo Thermomix</div></div>
+      </div>
+    </section>
 
     <h2>Qué puedes hacer</h2>
     <ul class="features">
@@ -163,5 +191,13 @@
       <a href="eliminar-datos.html">Eliminación de datos</a>
     </footer>
   </div>
+  <script>
+    // Oculta la sección de capturas si aún no hay imágenes cargadas.
+    window.addEventListener('load', () => {
+      const g = document.querySelector('.shots');
+      const sec = document.getElementById('shotsSec');
+      if (g && sec && g.children.length === 0) sec.style.display = 'none';
+    });
+  </script>
 </body>
 </html>
